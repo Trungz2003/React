@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- function Header(){
+        return(
+            <div>Header</div>
+        )
+    }
+    const app = (
+        <div className="wrapper">
+            <div>{Header()}</div>
+            <div>new content</div>
+            <div>footer</div>
+        </div>
+    ) -->
+</body>
+<script type="text/babel">
+
+    /*
+        - type của classElement hỗ trợ nhiều type: string, funcion, class
+        - có thể bóc tách thành nhiều thành phần nhỏ giúp code clean hơn, ngắn gọn hơn, logic nghiệp vụ rõ ràng hơn, dễ tái sử dụng hơn, 
+    */
+
+    /*function Test(props) {
+        return (
+            <div className="post-item">
+                <img src={props.linkImg} alt="" />
+                <h2 className="post-title">{props.title}</h2>
+                <p className="post-desc">{props.desc}</p>
+                <p className="post-published">{props.published}</p>
+            </div>
+        );
+    }
+
+    const posts = [
+        {
+            linkImg: 'https://files.fullstack.edu.vn/f8-prod/blog_posts/10850/667550d384026.png',
+            title: 'Mình đã làm thế nào để hoàn thành một dự án website chỉ trong',
+            desc: 'Xin chào mọi người mình là Lý Cao Nguyên, mình đã làm một dự án website front-end với hơn 100 bài học và 200 bài viết. Bài viết này...',
+            published: '4 tháng trước'
+        },
+        {
+            linkImg: 'https://example.com/image2.png',
+            title: 'Hướng dẫn xây dựng ứng dụng React từ đầu',
+            desc: 'Trong bài viết này, mình sẽ chia sẻ cách xây dựng một ứng dụng React hoàn chỉnh...',
+            published: '2 tháng trước'
+        },
+        {
+            linkImg: 'https://example.com/image3.png',
+            title: 'Những sai lầm thường gặp khi học lập trình',
+            desc: 'Có những sai lầm mà nhiều người mắc phải khi bắt đầu học lập trình. Bài viết này sẽ giúp bạn tránh được...',
+            published: '1 tuần trước'
+        }
+    ];
+
+    const app = (
+        <div className="post-list">
+            {posts.map((post, index) => (
+                <Test 
+                    key={index} 
+                    {...post} 
+                />
+            ))}
+        </div>
+    );*/
+    const courses = [
+    {
+    "id": 11503,
+    "user_id": 1,
+    "title": "Hoàng Bảo Trung - Học viên tiêu biểu của F8 tỏa sáng với dự án \"AI Powered Learning\"",
+    "slug": "hoang-bao-trung-hoc-vien-tieu-bieu-cua-f8-toa-sang-voi-du-an-ai-powered-learn-1",
+    "description": null,
+    "meta_title": "Hoàng Bảo Trung - Học viên tiêu biểu của F8 tỏa sáng với dự án \"AI Powered Learning\"",
+    "meta_description": "Trong thời đại công nghệ số 4.0, việc học không còn bó buộc trong những cuốn sách truyền thống. Giờ đây, trí tuệ nhân tạo (AI) đang...",
+    "image": "blog_posts/11504/66fd03ce0f809.jpg",
+    "thumbnail": "blog_posts/11504/66fd03cd7b3e4.jpg",
+    "min_read": 6,
+    "published_at": "2024-10-02 15:26:54",
+    "is_approved": true,
+    "created_at": "2024-10-02T08:21:48.000000Z",
+    "image_url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/11504/66fd03ce0f809.jpg",
+    "thumbnail_url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/11504/66fd03cd7b3e4.jpg",
+    "is_bookmark": false,
+    "is_published": true,
+    "user": {
+    "id": 1,
+    "username": "sondangf8",
+    "first_name": "Đặng",
+    "last_name": "Sơn",
+    "avatar": "user_avatars/1/64f9a2fd4e064.jpg",
+    "is_pro": true,
+    "is_admin": true,
+    "full_name": "Sơn Đặng",
+    "avatar_url": "https://files.fullstack.edu.vn/f8-prod/user_avatars/1/64f9a2fd4e064.jpg",
+    "cover_url": "",
+    "is_comment_blocked": false,
+    "is_blocked": false
+    },
+    "tags": [
+    {
+    "id": 2,
+    "name": "ReactJS",
+    "slug": "reactjs"
+    },
+    {
+    "id": 109,
+    "name": "Front-end",
+    "slug": "front-end"
+    },
+    {
+    "id": 123,
+    "name": "UI",
+    "slug": "ui"
+    },
+    {
+    "id": 124,
+    "name": "UX",
+    "slug": "ux"
+    }
+    ]
+    },
+    {
+    "id": 10849,
+    "user_id": 350007,
+    "title": "Mình đã làm thế nào để hoàn thành một dự án website chỉ trong 15 ngày",
+    "slug": "minh-da-lam-the-nao-de-hoan-thanh-mot-du-an-website-chi-trong-15-ngay",
+    "description": null,
+    "meta_title": "Mình đã làm thế nào để hoàn thành một dự án website chỉ trong 15 ngày",
+    "meta_description": "Xin chào mọi người mình là Lý Cao Nguyên, mình đã làm một dự án website front-end với hơn 100 bài học và 200 bài viết.\r\n\r\nBài viết này...",
+    "image": "blog_posts/10850/667550d41aa01.png",
+    "thumbnail": "blog_posts/10850/667550d384026.png",
+    "min_read": 4,
+    "published_at": "2024-06-21 17:07:16",
+    "is_approved": true,
+    "created_at": "2024-06-21T09:26:09.000000Z",
+    "image_url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/10850/667550d41aa01.png",
+    "thumbnail_url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/10850/667550d384026.png",
+    "is_bookmark": false,
+    "is_published": true,
+    "user": {
+    "id": 350007,
+    "username": "caonguyen2009",
+    "first_name": "Cao Nguyên",
+    "last_name": "Lý",
+    "avatar": "public-images/6670ea3e254bb.png",
+    "is_pro": false,
+    "is_admin": false,
+    "full_name": "Lý Cao Nguyên",
+    "avatar_url": "https://files.fullstack.edu.vn/f8-prod/public-images/6670ea3e254bb.png",
+    "cover_url": "",
+    "is_comment_blocked": false,
+    "is_blocked": false
+    },
+    "tags": [
+    {
+    "id": 109,
+    "name": "Front-end",
+    "slug": "front-end"
+    }
+    ]
+    },
+    {
+    "id": 10657,
+    "user_id": 350007,
+    "title": "Thư cảm ơn gửi đến anh Sơn",
+    "slug": "thu-cam-on-gui-den-anh-son",
+    "description": null,
+    "meta_title": "Thư cảm ơn gửi đến anh Sơn",
+    "meta_description": "Xin chào mọi người và anh Sơn. Em tên là Lý Cao Nguyên Vào năm 2022 em có vô tình lướt thấy những video dạy học của anh trên...",
+    "image": "blog_posts/10658/665db08628c84.png",
+    "thumbnail": "blog_posts/10658/665db085cc3fb.png",
+    "min_read": 2,
+    "published_at": "2024-06-03 19:01:10",
+    "is_approved": true,
+    "created_at": "2024-06-03T11:48:30.000000Z",
+    "image_url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/10658/665db08628c84.png",
+    "thumbnail_url": "https://files.fullstack.edu.vn/f8-prod/blog_posts/10658/665db085cc3fb.png",
+    "is_bookmark": false,
+    "is_published": true,
+    "user": {
+    "id": 350007,
+    "username": "caonguyen2009",
+    "first_name": "Cao Nguyên",
+    "last_name": "Lý",
+    "avatar": "public-images/6670ea3e254bb.png",
+    "is_pro": false,
+    "is_admin": false,
+    "full_name": "Lý Cao Nguyên",
+    "avatar_url": "https://files.fullstack.edu.vn/f8-prod/public-images/6670ea3e254bb.png",
+    "cover_url": "",
+    "is_comment_blocked": false,
+    "is_blocked": false
+    },
+
+    },]
+    
+    function Test(props) {
+        return (
+            <div className="post-item">
+                <img src={props.thumbnail_url} alt={props.title} />
+                <h2 className="post-title">{props.title}</h2>
+                <p className="post-desc">{props.meta_description}</p>
+                <p className="post-published">{props.published_at}</p>
+                <p className="post-author">Tác giả: {props.user.full_name}</p>
+            </div>
+        );
+    }
+    
+    
+    const app = (
+        <div className="post-list">
+            {courses.map((post, index) => (
+                <Test 
+                    key={index} 
+                    {...post} 
+                />
+            ))}
+        </div>
+    );
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(app)
+</script>
+</html>

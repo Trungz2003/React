@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="root"></div>
+</body>
+<script>
+    const root = document.getElementsByClassName('root')[0]; // lấy thẻ root trong giao diện
+    const h1 = document.createElement('h1'); // tạo thẻ mới thuộc tính h1
+
+    h1.innerText = 'Hello'; // set text cho thẻ h1
+    h1.id = 'text' // set id
+    h1.className = 'xin-chao' // set class
+
+    // sét css cho h1
+    Object.assign(h1.style, { 
+        color: 'blue',
+        backgroundColor: 'black'
+    });
+
+    console.log(h1);
+
+    // append vào trong thẻ root
+    root.appendChild(h1)
+</script>
+</html>

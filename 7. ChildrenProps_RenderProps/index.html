@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Console Test</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    
+    const user = {
+        firstName: 'Quang',
+        lastName: "Trung", 
+        avatarUrl: "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-1/464316242_1088928215961315_2698741511190548954_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=50d2ac&_nc_ohc=r6etzF64EKwQ7kNvgEj7aeW&_nc_zt=24&_nc_ht=scontent.fhan17-1.fna&_nc_gid=A8XQwLwyOgBAv-zVg_KC5wT&oh=00_AYC48g4R3UYJ4pm4QMf2nVUrWj7bAEi-6mYyw5QF2V6M5A&oe=672DF0EF"
+    };
+
+    function FormatName(){
+        console.log(user.firstName + " " + user.lastName);
+        return user.firstName + " " + user.lastName
+    }
+
+    function App(){
+        return (
+            <div className="wraper">
+                <h1>{FormatName()}</h1> 
+                <img src={user.avatarUrl} alt=""/>
+            </div>
+        )
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+
+    root.render(App());
+</script>
+</html>

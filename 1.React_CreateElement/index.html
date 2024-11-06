@@ -1,0 +1,84 @@
+<!-- react element là thành phần nhỏ nhất trong react -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <!-- // DOM
+        var h1Dom = document.createElement('h1');
+    
+        h1Dom.title = 'hello';
+        h1Dom.className= 'hello';
+        h1Dom.innerText = 'Hello';
+    
+        document.body.appendChild(h1Dom)
+    
+        // React
+    
+        // React.createElement(type, props, chidlren)
+        var h1React = React.createElement('h1',{
+            title: 'hello',
+            className: 'hello'
+        }, 'trung');
+    
+        console.log(h1Dom)
+        console.dir(h1React)     -->
+        <!-- // DOM
+        var ulDom = document.createElement('ul');
+    
+        const liDom1 = document.createElement('li');
+        liDom1.innerText = 'Trung';
+        const liDom2 = document.createElement('li')
+        liDom2.innerText= 'manh';
+    
+        ulDom.appendChild(liDom1)
+        ulDom.appendChild(liDom2)
+    
+        document.body.appendChild(ulDom)
+    
+        //React
+        var ulReact = React.createElement(
+            'ul',
+            null, 
+            React.createElement('li', null, 'Trung'),
+            React.createElement('li', null, 'Manh')
+        )
+
+        console.log(ulReact) -->
+    </body>
+
+    <script>
+        const div = React.createElement(
+            'div',
+            {
+                className: 'post-item'
+            },
+            React.createElement(
+                'h2',
+                {
+                    title: 'Học react tại f8'
+                },
+                'Học reactjs'
+            ),
+            React.createElement(
+                'p',
+                null,
+                'Học react từ cơ bản đến nâng cao'
+            )
+        );
+              
+        
+
+        //console.log(div)
+    </script>
+
+</html>
+
