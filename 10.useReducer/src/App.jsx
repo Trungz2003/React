@@ -36,7 +36,7 @@ function App() {
     if(inputValue.trim() !== ''){
       // set dữ liệu để gửi lên action thực hiện tiếp
       dispatch({
-        type: UPDATE_ACTION, 
+        type: UPDATE_ACTION,
         payload: inputValue
       })
 
