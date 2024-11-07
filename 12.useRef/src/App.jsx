@@ -3,15 +3,20 @@ import './App.css'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 
-const tabs = ['start', 'stops']
+// useRef được sử dụng để giữ một giá trị không thay đổi
+
+const tabs = ['start', 'stops'] // Khởi tạo 2 nút ấn
 
 function App() {
 
+  // khởi tạo các hook useState
   const [number, setNumber] = useState(60)
   const [status, setStatus] = useState('')
 
+  // khởi tạo hook useref
   const timerId = useRef()
 
+  // Hàm sử lý start
   const handleStart = () => {
     timerId.current = setInterval(()=>{
       setNumber( prev => prev - 1);

@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.dark {
+  color: white;
+  background-color: black;
+}
+
+.light{
+  color: black;
+  background-color: white;
+}
